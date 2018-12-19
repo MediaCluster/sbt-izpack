@@ -20,7 +20,7 @@ name := "sbt-izpack"
 
 organization := "de.mediacluster.sbt"
 
-scalaVersion := "2.10.5"
+scalaVersion := "2.10.7"
 
 scalacOptions in Compile ++= Seq(
   "-encoding", "UTF-8",
@@ -95,6 +95,8 @@ pomExtra := (
 
 scriptedSettings
 
-scriptedLaunchOpts <+= version apply { v => s"-Dproject.version=$v" }
+scriptedLaunchOpts ++= Seq(
+  s"-Dproject.version=${version.value}"
+)
 
 scriptedBufferLog := false
