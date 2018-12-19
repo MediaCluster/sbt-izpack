@@ -37,9 +37,10 @@ lazy val root = project.in(file("."))
   .dependsOn(actions)
   .aggregate(actions)
   .settings(
-    TaskKey[Unit]("check") <<= (IzPackKeys.outputFile) map { (outFile) =>
+    TaskKey[Unit]("check") := {
       import java.util.jar.JarFile
       val name = "custom/CustomActionListener.class"
+      val outFile = IzPackKeys.outputFile.value
       if (null == new JarFile(outFile).getJarEntry(name)) {
         sys.error("Jar entry " + name + " not found in " + outFile)
       }

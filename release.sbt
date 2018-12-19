@@ -73,5 +73,4 @@ releaseProcess := Seq[ReleaseStep](
   ReleaseStep({st => mergeReleaseBranchIntoDevelopAndStayThere(st)}),
   setNextVersion,
   commitNextVersion
-//  pushChanges
 )
