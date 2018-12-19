@@ -65,14 +65,6 @@ libraryDependencies ++= Seq(
   "org.codehaus.izpack" % "izpack-compiler" % "5.1.1"
 )
 
-TaskKey[Unit]("git-list-tags") := {
-  val cmd = git.runner.value
-  val cwd = baseDirectory.value
-  val log = streams.value.log
-  println("Base directory is " + cwd)
-  cmd.apply("tag","-l")(cwd, log)
-}
-
 addSbtPlugin("com.typesafe.sbt" %% "sbt-native-packager" % "1.1.5")
 
 enablePlugins(GitBranchPrompt)
