@@ -4,8 +4,8 @@ sbt-izpack
 <a href="https://raw.githubusercontent.com/MediaCluster/sbt-izpack/master/LICENSE">
   <img src="https://img.shields.io/hexpm/l/plug.svg" alt="License: Apache 2">
 </a>
-<a href='https://bintray.com/mediacluster/sbt-plugins/sbt-izpack/_latestVersion'>
-  <img src='https://api.bintray.com/packages/mediacluster/sbt-plugins/sbt-izpack/images/download.svg'>
+<a href='https://bintray.com/mediacluster/sbt-plugins/sbt-izpack/1.1.0/link'>
+  <img src='https://api.bintray.com/packages/mediacluster/sbt-plugins/sbt-izpack/images/download.svg?version=1.1.0'>
 </a>
 <a href="https://travis-ci.org/MediaCluster/sbt-izpack/">
   <img src="https://travis-ci.org/MediaCluster/sbt-izpack.png" alt="Travis Build">
@@ -17,7 +17,7 @@ package from staged distribution files.
 To use this plugin use the addSbtPlugin command within your project's plugins.sbt (or as a global setting) i.e.:
 
 ```
-addSbtPlugin("de.mediacluster.sbt" % "sbt-izpack" % "1.0.0")
+addSbtPlugin("de.mediacluster.sbt" % "sbt-izpack" % "1.1.0")
 ```
 
 Your project's build file also needs to enable this plugin. For example with build.sbt:
